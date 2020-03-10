@@ -19,5 +19,3 @@ protocol RootBuilder: AnyObject {
 protocol RootRouter: AnyObject {
     func showEmpty()
 }
-
-protocol RootViewModel {}

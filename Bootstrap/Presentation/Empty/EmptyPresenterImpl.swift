@@ -6,8 +6,6 @@
 //  Copyright © 2020 Alex Yanski. All rights reserved.
 //
 
-import Foundation
-
 final class EmptyPresenterImpl: EmptyPresenter {
     private unowned let view: EmptyView
     private let router: EmptyRouter
