@@ -6,7 +6,6 @@ use_frameworks!
 def common_pods
   pod 'SnapKit', '~> 5'
   pod 'SwiftFormat/CLI'
-  pod 'SwiftGen'
 end
 
 target 'Bootstrap' do
