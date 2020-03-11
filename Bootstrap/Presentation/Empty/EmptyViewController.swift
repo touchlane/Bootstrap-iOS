@@ -19,7 +19,7 @@ class EmptyViewController: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = .white
-        navigationItem.title = "Bootstrap"
+        navigationItem.title = L10n.NavigationBar.title
 
         view.addSubview(contentView)
         contentView.backgroundColor = .white
@@ -38,7 +38,7 @@ class EmptyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoImageView.image = UIImage(named: "main_logo")
+        logoImageView.image = Asset.mainLogo.image
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         presenter.viewDidLoad()
     }
