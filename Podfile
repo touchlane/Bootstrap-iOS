@@ -4,7 +4,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 def common_pods
-  pod 'SnapKit', '~> 5'
+  pod 'SnapKit', '~> 4.0'
   pod 'SwiftFormat/CLI'
 end
 
