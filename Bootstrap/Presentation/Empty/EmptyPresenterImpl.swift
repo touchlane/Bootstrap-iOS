@@ -7,7 +7,7 @@
 //
 
 final class EmptyPresenterImpl: EmptyPresenter {
-    private unowned let view: EmptyView
+    private weak let view: EmptyView
     private let router: EmptyRouter
     private let interactor: EmptyInteractor
 
