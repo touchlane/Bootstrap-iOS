@@ -10,7 +10,7 @@ import UIKit
 
 final class RootComponent: EmptyDependency {
     private let dependency: RootDependency
-    let parent: UINavigationController
+    unowned let parent: UINavigationController
 
     init(dependency: RootDependency, parent: UINavigationController) {
         self.dependency = dependency

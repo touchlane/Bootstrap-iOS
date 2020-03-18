@@ -1,0 +1,11 @@
+strings:
+    inputs: Bootstrap
+    filter: .+\.strings$
+    outputs:
+      - templateName: structured-swift4
+        output: Bootstrap/Generated/Strings.swift
+xcassets:
+    inputs: Bootstrap/Assets.xcassets
+    outputs:
+      templateName: swift4
+      output: Bootstrap/Generated/Assets.swift
