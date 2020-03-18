@@ -1,6 +1,4 @@
-![LOGO](https://github.com/touchlane/Bootstrap-iOS/tree/readme/Assets/logo.svg)
-
-Bootstrap is a project 
+![LOGO](https://github.com/touchlane/Bootstrap-iOS/blob/readme/Assets/logo.svg)
 
 # Requirements
 
