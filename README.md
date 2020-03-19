@@ -1,32 +1,46 @@
 ![LOGO](https://github.com/touchlane/Bootstrap-iOS/blob/readme/Assets/logo.svg)
 
-# Requirements
+# Bootstrap - iOS
+
+## Requirements
 
 * iOS 9.0+
 * Xcode 10.2+
 * Swift 5.0+
 
-# How it works
+## About
 
-Bootstrap project is a 
+Bootstrap is a project template that you can use to start working on a new project. There are a set of necessary tools for you to start working on project immediately.
 
-# How to use
+**Rename project**
 
-## Setup
-Clone this repository
+[Xcode renamer](https://github.com/appculture/xcode-project-renamer) is a script which can rename your project. 
+
+**SwiftFormat**
+
+SwiftFormat is a tool for reformatting swift code. While formatting, SwiftFormat will automatically check inside each subdirectory for the presence of a `.swiftformat` file and will apply any options that it finds there to the files in that directory. You can change `.swiftformat` with [this rules](https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md).
+ 
+**SwiftGen**
+
+SwiftGen is a tool to auto-generate Swift code for resources of your project.
+
+SwiftGen uses a configuration file to run various actions. You can configurate a swiftgen.yml file, with subcommands that you need to invoke. For more information look at the [SwiftGen documentation](https://github.com/SwiftGen/SwiftGen).
+
+## How to setup
+
+1. Clone this repository:
 
 ```bash
-git clone https://github.com/touchlane/Bootstrap-iOS.git
+git clone --recursive https://github.com/touchlane/Bootstrap-iOS.git
 ```
 
-## Rename project
-Use [xcode-project-renamer](https://github.com/appculture/xcode-project-renamer) to rename this project. Run the script:
+2. Run the rename script:
 
 ```bash
-./vendor/Sources/main.swift "Bootstrap" "$NEW_PROJECT_NAME"
+./vendor/xcode-renamer/Sources/main.swift "Bootstrap" "$NEW_PROJECT_NAME"
 ```
 
-After that remove the `vendor` submodule
+After that remove the `vendor/xcode-renamer` submodule
 
 ```bash
 git submodule deinit -f vendor/xcode-renamer
@@ -34,9 +48,32 @@ rm -rf .git/modules/vendor/xcode-renamer
 git rm -f vendor/xcode-renamer
 ```
 
-## SwiftFormat
-[SwiftFormat](https://github.com/nicklockwood/SwiftFormat) is a tool for reformatting swift code.
-You can configurate the `.swiftfile` to changing rules for your project.
+3. Remove the `.git` folder:
+
+```bash
+rm -rf .git
+```
+
+4. Start a new git repository:
+
+```bash
+git init
+git add .
+git commit -m 'Initial commit'
+git push
+```
+
+## How to use
+
+**Rename project**
+
+To use `xcode-project-renamer` run the script: 
+
+```bash
+./vendor/xcode-renamer/Sources/main.swift "$OLD_PROJECT_NAME" "$NEW_PROJECT_NAME"
+```
+
+**SwiftFormat**
 
 For formating run the sctipt:
 
@@ -44,16 +81,43 @@ For formating run the sctipt:
 sh ./Scripts/swiftformat.sh
 ```
 
-## SwiftGen
-[SwiftGen](https://github.com/SwiftGen/SwiftGen) is a tool to auto-generate Swift code for resources of your project.
+If you need to change the formatting rules you should change rules in the `.swiftformat` file. Example of the `.swiftformat` file:
 
-SwiftGen uses a configuration file to run various actions. You can configurate a `swiftgen.yml` file, with subcommands that you need to invoke. For more information look at the SwiftGen [documentation](https://github.com/SwiftGen/SwiftGen).
+```
+--commas inline
+--header ignore
+--indent 4
+--patternlet inline
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--nospaceoperators ..<, ...
+--swiftversion 5.0
+
+--enable isEmpty
+--disable unusedArguments,trailingClosures,redundantReturn
+--exclude Pods,Scripts
+```
+
+**SwiftGen**
+
+To use SwiftGen, create a `swiftgen.yml` file to list all the subcommands to invoke, and for each subcommand, the list of arguments to pass to it. For example:
+
+```yaml
+strings:
+    inputs: Bootstrap
+    filter: .+\.strings$
+    outputs:
+      - templateName: structured-swift4
+        output: Bootstrap/Generated/Strings.swift
+xcassets:
+    inputs: Bootstrap/Assets.xcassets
+    outputs:
+      templateName: swift4
+      output: Bootstrap/Generated/Assets.swift
+```
 
 To apply changes in `swiftgen.yml` file, run the script:
 ```bash
 Pods/SwiftGen/bin/swiftgen
 ```
-
-## Don't forget
-
-Don't forget to delete the `.git` folder.
