@@ -34,7 +34,13 @@ SwiftGen uses a configuration file to run various actions. You can configurate a
 git clone --recursive https://github.com/touchlane/Bootstrap-iOS.git
 ```
 
-2. Run the rename script:
+2. Install pods:
+
+```bash
+pod install
+```
+
+3. Run the rename script:
 
 ```bash
 ./vendor/xcode-renamer/Sources/main.swift "Bootstrap" "$NEW_PROJECT_NAME"
@@ -48,13 +54,13 @@ rm -rf .git/modules/vendor/xcode-renamer
 git rm -f vendor/xcode-renamer
 ```
 
-3. Remove the `.git` folder:
+4. Remove the `.git` folder:
 
 ```bash
 rm -rf .git
 ```
 
-4. Start a new git repository:
+5. Start a new git repository:
 
 ```bash
 git init
@@ -65,14 +71,6 @@ git push
 
 ## How to use
 
-**Rename project**
-
-To use `xcode-project-renamer` run the script: 
-
-```bash
-./vendor/xcode-renamer/Sources/main.swift "$OLD_PROJECT_NAME" "$NEW_PROJECT_NAME"
-```
-
 **SwiftFormat**
 
 For formating run the sctipt:
@@ -81,43 +79,13 @@ For formating run the sctipt:
 sh ./Scripts/swiftformat.sh
 ```
 
-If you need to change the formatting rules you should change rules in the `.swiftformat` file. Example of the `.swiftformat` file:
-
-```
---commas inline
---header ignore
---indent 4
---patternlet inline
---wraparguments before-first
---wrapparameters before-first
---wrapcollections before-first
---nospaceoperators ..<, ...
---swiftversion 5.0
-
---enable isEmpty
---disable unusedArguments,trailingClosures,redundantReturn
---exclude Pods,Scripts
-```
+If you need to change the formatting rules you should change rules in the `.swiftformat` file.
 
 **SwiftGen**
 
-To use SwiftGen, create a `swiftgen.yml` file to list all the subcommands to invoke, and for each subcommand, the list of arguments to pass to it. For example:
-
-```yaml
-strings:
-    inputs: Bootstrap
-    filter: .+\.strings$
-    outputs:
-      - templateName: structured-swift4
-        output: Bootstrap/Generated/Strings.swift
-xcassets:
-    inputs: Bootstrap/Assets.xcassets
-    outputs:
-      templateName: swift4
-      output: Bootstrap/Generated/Assets.swift
-```
+To use SwiftGen, create a `swiftgen.yml` file to list all the subcommands to invoke, and for each subcommand, the list of arguments to pass to it. 
 
 To apply changes in `swiftgen.yml` file, run the script:
 ```bash
-Pods/SwiftGen/bin/swiftgen
+sh ./Scripts/swiftgen.sh
 ```
