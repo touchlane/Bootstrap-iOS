@@ -34,13 +34,7 @@ SwiftGen uses a configuration file to run various actions. You can configurate a
 git clone --recursive https://github.com/touchlane/Bootstrap-iOS.git
 ```
 
-2. Install pods:
-
-```bash
-pod install
-```
-
-3. Run the rename script:
+2. Run the rename script:
 
 ```bash
 ./vendor/xcode-renamer/Sources/main.swift "Bootstrap" "$NEW_PROJECT_NAME"
@@ -54,13 +48,13 @@ rm -rf .git/modules/vendor/xcode-renamer
 git rm -f vendor/xcode-renamer
 ```
 
-4. Remove the `.git` folder:
+3. Remove the `.git` folder:
 
 ```bash
 rm -rf .git
 ```
 
-5. Start a new git repository:
+4. Start a new git repository:
 
 ```bash
 git init
@@ -68,6 +62,13 @@ git add .
 git commit -m 'Initial commit'
 git push
 ```
+
+5. Install pods:
+
+```bash
+pod install
+```
+
 
 ## How to use
 
