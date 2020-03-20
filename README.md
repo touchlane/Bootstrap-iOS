@@ -1,4 +1,4 @@
-![LOGO](https://github.com/touchlane/Bootstrap-iOS/blob/readme/Assets/logo.svg)
+![LOGO](https://github.com/touchlane/Bootstrap-iOS/tree/develop/Assets/logo.svg)
 
 # Bootstrap - iOS
 
