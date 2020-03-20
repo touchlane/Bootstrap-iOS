@@ -1,0 +1,21 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+final class {{ module_info.name }}RouterImpl: {{ module_info.name }}Router {
+    private let scene: NavigationScene
+    private weak var listener: {{ module_info.name }}Listener?
+
+    init(scene: NavigationScene, listener: {{ module_info.name }}Listener) {
+        self.scene = scene
+        self.listener = listener
+    }
+
+    func back() {
+        listener?.on{{ module_info.name }}Back()
+    }
+}

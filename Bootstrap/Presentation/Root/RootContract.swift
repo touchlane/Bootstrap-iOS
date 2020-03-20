@@ -13,7 +13,7 @@ protocol RootDependency {
 }
 
 protocol RootBuilder: AnyObject {
-    func build() -> UIViewController
+    func build() -> RootViewController
 }
 
 protocol RootRouter: AnyObject {

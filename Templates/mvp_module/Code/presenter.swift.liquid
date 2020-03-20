@@ -1,0 +1,31 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+final class {{ module_info.name }}PresenterImpl: {{ module_info.name }}Presenter {
+    private weak var view: {{ module_info.name }}View?
+    private let interactor: {{ module_info.name }}Interactor
+    private let router: {{ module_info.name }}Router
+
+    init(
+        view: {{ module_info.name}}View,
+        interactor: {{ module_info.name }}Interactor,
+        router: {{ module_info.name }}Router
+    ) {
+        self.view = view
+        self.interactor = interactor
+        self.router = router
+    }
+
+    func viewDidLoad() {}
+
+    func viewWillAppear() {}
+
+    func handleBackPressed() {
+        router.back()
+    }
+}

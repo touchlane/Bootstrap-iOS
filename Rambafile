@@ -1,0 +1,23 @@
+### Headers settings
+company: Touchlane LLC
+
+### Xcode project settings
+project_name: Bootstrap-iOS
+xcodeproj_path: Bootstrap.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Bootstrap
+
+# The file path for new modules
+project_file_path: Bootstrap/Presentation
+
+# The Xcode group path to new modules
+project_group_path: /Bootstrap/Presentation
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: mvp_module, local: 'Templates/mvp_module'}

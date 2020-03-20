@@ -1,0 +1,26 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}ViewController: UIViewController {
+    var presenter: {{ module_info.name }}Presenter!
+
+    override func loadView() {
+        view = UIView()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+
+        presenter.viewDidLoad()
+    }
+}
+
+extension {{ module_info.name }}ViewController: {{ module_info.name }}View {}
