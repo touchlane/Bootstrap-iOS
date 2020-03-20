@@ -1,4 +1,3 @@
-//
 //  {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
@@ -9,15 +8,15 @@
 import UIKit
 
 protocol {{ module_info.name }}Dependency {
-    var parent: UINavigationController { get }
+    var parent: UIViewController { get }
 }
 
 protocol {{ module_info.name }}Builder {
-    func build(listener: {{ module_info.name }}Listener) -> {{ module_info.name }}ViewController
+    func build(listener: {{ module_info.name }}Listener) -> UIViewController
 }
 
 protocol {{ module_info.name }}Listener: AnyObject {
-    func on{{ module_info.name }}Back()
+    func on{{ module_info.name }}Finish()
 }
 
 protocol {{ module_info.name }}Router: AnyObject {
@@ -29,7 +28,7 @@ protocol {{ module_info.name }}Interactor: AnyObject {}
 protocol {{ module_info.name }}Presenter: AnyObject {
     func viewDidLoad()
     func viewWillAppear()
-    func handleBackPressed()
+    func handleBackButtonPressed()
 }
 
 protocol {{ module_info.name }}View: AnyObject {}

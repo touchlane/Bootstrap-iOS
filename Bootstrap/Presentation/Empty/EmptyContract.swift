@@ -13,7 +13,7 @@ protocol EmptyDependency {
 }
 
 protocol EmptyBuilder {
-    func build() -> EmptyViewController
+    func build() -> UIViewController
 }
 
 protocol EmptyRouter: AnyObject {}

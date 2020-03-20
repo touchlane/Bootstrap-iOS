@@ -15,7 +15,7 @@ class EmpryBuilderImpl: EmptyBuilder {
         self.dependency = dependency
     }
 
-    func build() -> EmptyViewController {
+    func build() -> UIViewController {
         let view = EmptyViewController()
 
         let navigationScene = NavigationScene(parent: dependency.parent)
