@@ -17,7 +17,9 @@ final class {{ module_info.name }}BuilderImpl: {{ module_info.name }}Builder {
     func build(listener: {{ module_info.name }}Listener) -> UIViewController {
         let view = {{ module_info.name }}ViewController()
         let component = {{ module_info.name }}Component(dependency: dependency)
-        let router = {{ module_info.name }}RouterImpl(listener: listener)
+
+        let navigationScene = NavigationScene(parent: view)
+        let router = {{ module_info.name }}RouterImpl(listener: listener, navigationScene: navigationScene)
         let interactor = {{ module_info.name }}InteractorImpl()
         let presenter = {{ module_info.name }}PresenterImpl(
             view: view,

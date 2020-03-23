@@ -42,6 +42,11 @@ class EmptyViewController: UIViewController {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         presenter.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
 }
 
 extension EmptyViewController: EmptyView {}

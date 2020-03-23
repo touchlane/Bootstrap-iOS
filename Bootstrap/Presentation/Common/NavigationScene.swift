@@ -9,17 +9,19 @@
 import UIKit
 
 class NavigationScene {
-    let parent: UINavigationController
+    let parent: UIViewController
 
-    init(parent: UINavigationController) {
+    init(parent: UIViewController) {
         self.parent = parent
     }
 
     func play(view: UIViewController) {
-        parent.pushViewController(view, animated: true)
+        let navigation: UINavigationController? = parent as? UINavigationController ?? parent.navigationController
+        navigation?.pushViewController(view, animated: true)
     }
 
     func stop() {
-        parent.popViewController(animated: true)
+        let navigation: UINavigationController? = parent as? UINavigationController ?? parent.navigationController
+        navigation?.popViewController(animated: true)
     }
 }

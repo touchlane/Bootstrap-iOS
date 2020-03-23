@@ -15,7 +15,7 @@ class RootBuilderImpl: RootBuilder {
         self.dependency = dependency
     }
 
-    func build() -> RootViewController {
+    func build() -> UIViewController {
         let view = RootViewController()
         let component = RootComponent(dependency: dependency, parent: view)
         let emptyBuilder = EmpryBuilderImpl(dependency: component)

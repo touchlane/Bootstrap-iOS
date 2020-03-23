@@ -20,6 +20,11 @@ final class {{ module_info.name }}ViewController: UIViewController {
 
         presenter.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
 }
 
 extension {{ module_info.name }}ViewController: {{ module_info.name }}View {}

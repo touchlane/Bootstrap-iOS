@@ -7,9 +7,14 @@
 
 final class {{ module_info.name }}RouterImpl: {{ module_info.name }}Router {
     private weak var listener: {{ module_info.name }}Listener?
+    private let navigationScene: NavigationScene
 
-    init(listener: {{ module_info.name }}Listener) {
+    init(
+	listener: {{ module_info.name }}Listener,
+	navigationScene: NavigationScene
+    ) {
         self.listener = listener
+	self.navigationScene = navigationScene
     }
 
     func back() {
