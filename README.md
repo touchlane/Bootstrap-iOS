@@ -49,9 +49,9 @@ git clone --recursive https://github.com/touchlane/Bootstrap-iOS.git
 After that remove the `vendor/xcode-renamer` submodule
 
 ```bash
-git submodule deinit -f vendor/xcode-renamer
 rm -rf .git/modules/vendor/xcode-renamer
-git rm -f vendor/xcode-renamer
+rm -rf vendor
+rm -rf .gitmodules
 ```
 
 3. Remove the `.git` folder:
@@ -78,14 +78,6 @@ pod install
 
 ## How to use
 
-**SwiftFormat**
-
-For formating run the sctipt:
-
-```bash
-sh ./Scripts/swiftformat.sh
-```
-
 If you need to change the formatting rules you should change rules in the `.swiftformat` file.
 
 **SwiftGen**
@@ -110,4 +102,12 @@ For using our `mvp_module` template run:
 
 ```bash
 generamba gen [MODULE_NAME] mvp_module
+```
+
+**SwiftFormat**
+
+For formating run the sctipt:
+
+```bash
+sh ./Scripts/swiftformat.sh
 ```
