@@ -12,11 +12,15 @@ protocol EmptyDependency {
     var parent: UINavigationController { get }
 }
 
-protocol EmptyCoordinator: AnyObject {
-    func start()
+protocol EmptyBuilder {
+    func build() -> UIViewController
 }
 
 protocol EmptyRouter: AnyObject {}
+
+protocol EmptyListener: AnyObject {
+    func onEmptyBack()
+}
 
 protocol EmptyView: AnyObject {}
 
@@ -26,7 +30,3 @@ protocol EmptyPresenter {
 }
 
 protocol EmptyInteractor {}
-
-protocol EmptyBuilder {
-    func build() -> UIViewController
-}

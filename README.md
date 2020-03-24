@@ -26,6 +26,12 @@ SwiftGen is a tool to auto-generate Swift code for resources of your project.
 
 SwiftGen uses a configuration file to run various actions. You can configurate a swiftgen.yml file, with subcommands that you need to invoke. For more information look at the [SwiftGen documentation](https://github.com/SwiftGen/SwiftGen).
 
+**Generamba**
+
+[Generamba](https://github.com/strongself/Generamba) is a code generator made for working with Xcode.
+
+Primarily it is designed to generate VIPER modules but it is quite easy to customize it for generation of any other classes. For our case we create a MVP template with Router, Interactor, Builder, Component and Contract.
+
 ## How to setup
 
 1. Clone this repository:
@@ -87,6 +93,21 @@ If you need to change the formatting rules you should change rules in the `.swif
 To use SwiftGen, create a `swiftgen.yml` file to list all the subcommands to invoke, and for each subcommand, the list of arguments to pass to it. 
 
 To apply changes in `swiftgen.yml` file, run the script:
+
 ```bash
 sh ./Scripts/swiftgen.sh
+```
+
+**Generamba**
+
+To install Generamba it self run the command:
+
+```bash
+gem install generamba
+```
+
+For using our `mvp_module` template run:
+
+```bash
+generamba gen [MODULE_NAME] mvp_module
 ```
