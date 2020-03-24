@@ -1,4 +1,4 @@
-# Changelog for Bootstrap-iOS 0.0.1
+# Changelog for Bootstrap-iOS 1.0.0
 ### Added
 * Initial setup
 * SwiftGen support
