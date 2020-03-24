@@ -50,7 +50,7 @@ After that remove the `vendor/xcode-renamer` submodule
 
 ```bash
 rm -rf .git/modules/vendor/xcode-renamer
-rm -rf vendor/xcode-renamer
+rm -rf vendor
 rm -rf .gitmodules
 ```
 
