@@ -113,15 +113,15 @@ sh ./Scripts/swiftformat.sh
 
 ## Release instructions 
 
-1. Create a pull request for release.
+1. Create a pull request for release and wait for the approval.
 2. Merge `develop` to `master`.
-3. Tag the merge commit by release version and push it:
+3. Tag the merge commit by release version and push it. Note that tag version should match version number.
 
 ```bash
-git tag [TAG_NAME]
+git tag [RELEASE_VERSION]
 git push --tags
 ```
 
 4. Open `release` on [Bootstrap-iOS](https://github.com/touchlane/Bootstrap-iOS) page. 
-5. Type a title and description for your release.
+5. Copy and paste appropriate release notes from CANGELOG.md.
 5. Click `Publish release`
