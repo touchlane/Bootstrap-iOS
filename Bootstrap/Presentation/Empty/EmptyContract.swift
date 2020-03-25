@@ -22,7 +22,10 @@ protocol EmptyListener: AnyObject {
     func onEmptyBack()
 }
 
-protocol EmptyView: AnyObject {}
+protocol EmptyView: AnyObject {
+    func display(headerTitle: String)
+    func display(footerImage: UIImage)
+}
 
 protocol EmptyPresenter {
     func viewDidLoad()
