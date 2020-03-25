@@ -75,7 +75,6 @@ git push
 pod install
 ```
 
-
 ## How to use
 
 If you need to change the formatting rules you should change rules in the `.swiftformat` file.
@@ -111,3 +110,18 @@ For formating run the sctipt:
 ```bash
 sh ./Scripts/swiftformat.sh
 ```
+
+## Release instructions 
+
+1. Create a pull request for release.
+2. Merge `develop` to `master`.
+3. Tag the merge commit by release version and push it:
+
+```bash
+git tag [TAG_NAME]
+git push --tags
+```
+
+4. Open `release` on [Bootstrap-iOS](https://github.com/touchlane/Bootstrap-iOS) page. 
+5. Type a title and description for your release.
+5. Click `Publish release`
