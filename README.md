@@ -113,8 +113,8 @@ sh ./Scripts/swiftformat.sh
 
 ## Release instructions 
 
-1. Create a pull request for release and wait for the approval.
-2. Merge `develop` to `master`.
+1. Create a pull request from `develop` to `master`.
+2. Wait till approved.
 3. Tag the merge commit by release version and push it. Note that tag version should match version number.
 
 ```bash
