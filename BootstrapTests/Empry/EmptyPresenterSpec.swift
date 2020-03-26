@@ -34,12 +34,12 @@ final class EmptyPresenterSpec: QuickSpec {
         describe("on viewDidLoad") {
             it("displays header title") {
                 presenter.viewDidLoad()
-                expect(view.invokedDisplayHeaderTitleParameters?.headerTitle).notTo(beEmpty())
+                expect(view.invokedDisplayHeaderTitleParameters).notTo(beEmpty())
             }
 
             it("displays footer image") {
                 presenter.viewDidLoad()
-                expect(view.invokedDisplayFooterImageParameters?.footerImage).notTo(beNil())
+                expect(view.invokedDisplayFooterImageParameters).notTo(beNil())
             }
         }
     }

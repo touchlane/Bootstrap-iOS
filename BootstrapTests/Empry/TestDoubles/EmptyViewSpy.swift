@@ -11,13 +11,13 @@ import UIKit
 @testable import Bootstrap
 
 final class EmptyViewSpy: EmptyView {
-    var invokedDisplayHeaderTitleParameters: (headerTitle: String, Void)?
+    var invokedDisplayHeaderTitleParameters: String?
     func display(headerTitle: String) {
-        invokedDisplayHeaderTitleParameters = (headerTitle, ())
+        invokedDisplayHeaderTitleParameters = headerTitle
     }
 
-    var invokedDisplayFooterImageParameters: (footerImage: UIImage, Void)?
+    var invokedDisplayFooterImageParameters: UIImage?
     func display(footerImage: UIImage) {
-        invokedDisplayFooterImageParameters = (footerImage, ())
+        invokedDisplayFooterImageParameters = footerImage
     }
 }
