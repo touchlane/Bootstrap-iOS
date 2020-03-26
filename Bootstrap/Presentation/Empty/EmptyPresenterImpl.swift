@@ -21,7 +21,10 @@ final class EmptyPresenterImpl: EmptyPresenter {
         self.interactor = interactor
     }
 
-    func viewDidLoad() {}
+    func viewDidLoad() {
+        view?.display(headerTitle: L10n.NavigationBar.title)
+        view?.display(footerImage: Asset.mainLogo.image)
+    }
 
     func viewWillAppear() {}
 }

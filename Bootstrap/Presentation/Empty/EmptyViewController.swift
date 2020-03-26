@@ -19,7 +19,6 @@ class EmptyViewController: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = .white
-        navigationItem.title = L10n.NavigationBar.title
 
         view.addSubview(contentView)
         contentView.backgroundColor = .white
@@ -38,8 +37,6 @@ class EmptyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoImageView.image = Asset.mainLogo.image
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         presenter.viewDidLoad()
     }
 
@@ -49,4 +46,13 @@ class EmptyViewController: UIViewController {
     }
 }
 
-extension EmptyViewController: EmptyView {}
+extension EmptyViewController: EmptyView {
+    func display(headerTitle: String) {
+        navigationItem.title = headerTitle
+    }
+
+    func display(footerImage: UIImage) {
+        logoImageView.image = footerImage
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+    }
+}

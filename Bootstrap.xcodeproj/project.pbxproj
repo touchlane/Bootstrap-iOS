@@ -12,6 +12,10 @@
 		A32F622924191D9300891B52 /* Empty.strings in Resources */ = {isa = PBXBuildFile; fileRef = A32F622824191D9300891B52 /* Empty.strings */; };
 		A3464F1D2419212400912FF1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3464F1B2419212400912FF1 /* Strings.swift */; };
 		A3464F1E2419212400912FF1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3464F1C2419212400912FF1 /* Assets.swift */; };
+		A3841A57242BA33100C2319B /* EmptyPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3841A56242BA33100C2319B /* EmptyPresenterSpec.swift */; };
+		A3841A5A242BA3D600C2319B /* EmptyViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3841A59242BA3D600C2319B /* EmptyViewSpy.swift */; };
+		A3841A5C242BA50400C2319B /* EmpryRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3841A5B242BA50400C2319B /* EmpryRouterSpy.swift */; };
+		A3841A5E242BA54F00C2319B /* EmptyInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3841A5D242BA54F00C2319B /* EmptyInteractorSpy.swift */; };
 		A3FBB6D9240E376000060802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FBB6D8240E376000060802 /* AppDelegate.swift */; };
 		A3FBB6DD240E376000060802 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FBB6DC240E376000060802 /* EmptyViewController.swift */; };
 		A3FBB6E2240E376000060802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3FBB6E1240E376000060802 /* Assets.xcassets */; };
@@ -31,7 +35,6 @@
 		A3FBB7112410EBD300060802 /* EmptyRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FBB7102410EBD300060802 /* EmptyRouterImpl.swift */; };
 		A3FBB7132410EC3E00060802 /* EmptyInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FBB7122410EC3E00060802 /* EmptyInteractorImpl.swift */; };
 		A3FBB7152410F04E00060802 /* EmptyPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FBB7142410F04E00060802 /* EmptyPresenterImpl.swift */; };
-		A3FBB71D24123B1A00060802 /* BootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FBB71C24123B1A00060802 /* BootstrapTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,10 @@
 		A32F622824191D9300891B52 /* Empty.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Empty.strings; sourceTree = "<group>"; };
 		A3464F1B2419212400912FF1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		A3464F1C2419212400912FF1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		A3841A56242BA33100C2319B /* EmptyPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresenterSpec.swift; sourceTree = "<group>"; };
+		A3841A59242BA3D600C2319B /* EmptyViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewSpy.swift; sourceTree = "<group>"; };
+		A3841A5B242BA50400C2319B /* EmpryRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpryRouterSpy.swift; sourceTree = "<group>"; };
+		A3841A5D242BA54F00C2319B /* EmptyInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInteractorSpy.swift; sourceTree = "<group>"; };
 		A3FBB6D5240E376000060802 /* Bootstrap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bootstrap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FBB6D8240E376000060802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3FBB6DC240E376000060802 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +81,6 @@
 		A3FBB7122410EC3E00060802 /* EmptyInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInteractorImpl.swift; sourceTree = "<group>"; };
 		A3FBB7142410F04E00060802 /* EmptyPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresenterImpl.swift; sourceTree = "<group>"; };
 		A3FBB71A24123B1A00060802 /* BootstrapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BootstrapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3FBB71C24123B1A00060802 /* BootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapTests.swift; sourceTree = "<group>"; };
 		A3FBB71E24123B1A00060802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E20A6D8F7571970A8697B276 /* Pods-Bootstrap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bootstrap.release.xcconfig"; path = "Target Support Files/Pods-Bootstrap/Pods-Bootstrap.release.xcconfig"; sourceTree = "<group>"; };
 		F9B1A3EF4F2A2B830D394FF4 /* Pods_Bootstrap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bootstrap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,25 @@
 				A3464F1B2419212400912FF1 /* Strings.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		A3841A55242BA2F000C2319B /* Empry */ = {
+			isa = PBXGroup;
+			children = (
+				A3841A56242BA33100C2319B /* EmptyPresenterSpec.swift */,
+				A3841A58242BA3B900C2319B /* TestDoubles */,
+			);
+			path = Empry;
+			sourceTree = "<group>";
+		};
+		A3841A58242BA3B900C2319B /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				A3841A59242BA3D600C2319B /* EmptyViewSpy.swift */,
+				A3841A5B242BA50400C2319B /* EmpryRouterSpy.swift */,
+				A3841A5D242BA54F00C2319B /* EmptyInteractorSpy.swift */,
+			);
+			path = TestDoubles;
 			sourceTree = "<group>";
 		};
 		A3FBB6CC240E376000060802 = {
@@ -221,7 +246,7 @@
 		A3FBB71B24123B1A00060802 /* BootstrapTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3FBB71C24123B1A00060802 /* BootstrapTests.swift */,
+				A3841A55242BA2F000C2319B /* Empry */,
 				A3FBB71E24123B1A00060802 /* Info.plist */,
 			);
 			path = BootstrapTests;
@@ -285,6 +310,7 @@
 					};
 					A3FBB71924123B1A00060802 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = A3FBB6D4240E376000060802;
 					};
 				};
@@ -457,7 +483,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3FBB71D24123B1A00060802 /* BootstrapTests.swift in Sources */,
+				A3841A5E242BA54F00C2319B /* EmptyInteractorSpy.swift in Sources */,
+				A3841A5C242BA50400C2319B /* EmpryRouterSpy.swift in Sources */,
+				A3841A57242BA33100C2319B /* EmptyPresenterSpec.swift in Sources */,
+				A3841A5A242BA3D600C2319B /* EmptyViewSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +668,7 @@
 			baseConfigurationReference = A084F487BBD5CA3890844688 /* Pods-BootstrapTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BootstrapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,6 +678,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchlane.BootstrapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bootstrap.app/Bootstrap";
@@ -659,6 +690,7 @@
 			baseConfigurationReference = 88B6E28DB9BB18FFC2541491 /* Pods-BootstrapTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BootstrapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
