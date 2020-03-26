@@ -125,4 +125,4 @@ git push --tags
 
 5. Open `release` on [Bootstrap-iOS](https://github.com/touchlane/Bootstrap-iOS) page. 
 6. Copy and paste appropriate release notes from CANGELOG.md.
-7. Click `Publish release`
+7. Click `Publish release`.
