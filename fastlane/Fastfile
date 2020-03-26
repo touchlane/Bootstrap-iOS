@@ -1,0 +1,19 @@
+# !/usr/bin/env ruby
+# frozen_string_literal: true
+
+default_platform(:ios)
+
+platform :ios do
+  desc 'Run all the tests'
+  lane :test do
+    scan(
+      scheme: 'Bootstrap',
+      output_directory: 'test-results',
+      output_types: 'junit',
+      output_files: 'testReport.xml',
+      derived_data_path: 'Build/',
+      clean: true,
+      code_coverage: true
+    )
+  end
+end
