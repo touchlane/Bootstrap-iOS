@@ -116,7 +116,7 @@ sh ./Scripts/swiftformat.sh
 1. Create a pull request from `develop` to `master`.
 2. Wait till approved.
 3. Merge pull request.
-4. Tag the merge commit by release version and push it. Note that the tag version should match version number.
+4. Tag the merge commit by release version and push it.
 
 ```bash
 git tag [RELEASE_VERSION]
