@@ -116,13 +116,13 @@ sh ./Scripts/swiftformat.sh
 1. Create a pull request from `develop` to `master`.
 2. Wait till approved.
 3. Merge pull request.
-3. Tag the merge commit by release version and push it. Note that the tag version should match version number.
+4. Tag the merge commit by release version and push it. Note that the tag version should match version number.
 
 ```bash
 git tag [RELEASE_VERSION]
 git push --tags
 ```
 
-4. Open `release` on [Bootstrap-iOS](https://github.com/touchlane/Bootstrap-iOS) page. 
-5. Copy and paste appropriate release notes from CANGELOG.md.
-5. Click `Publish release`
+5. Open `release` on [Bootstrap-iOS](https://github.com/touchlane/Bootstrap-iOS) page. 
+6. Copy and paste appropriate release notes from CANGELOG.md.
+7. Click `Publish release`
