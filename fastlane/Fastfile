@@ -10,7 +10,7 @@ platform :ios do
   desc 'Run all the tests'
   lane :test do
     scan(
-      scheme: 'development_scheme',
+      scheme: development_scheme,
       output_directory: 'test-results',
       output_types: 'junit',
       output_files: 'testReport.xml',
