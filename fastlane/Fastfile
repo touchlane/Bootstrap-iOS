@@ -1,13 +1,16 @@
 # !/usr/bin/env ruby
 # frozen_string_literal: true
 
+# Xcode schemes
+development_scheme = 'Bootstrap' 
+
 default_platform(:ios)
 
 platform :ios do
   desc 'Run all the tests'
   lane :test do
     scan(
-      scheme: 'Bootstrap',
+      scheme: 'development_scheme',
       output_directory: 'test-results',
       output_types: 'junit',
       output_files: 'testReport.xml',

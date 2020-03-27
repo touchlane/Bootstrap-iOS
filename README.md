@@ -32,6 +32,11 @@ SwiftGen uses a configuration file to run various actions. You can configurate a
 
 Primarily it is designed to generate VIPER modules but it is quite easy to customize it for generation of any other classes. For our case we create a MVP template with Router, Interactor, Builder, Component and Contract.
 
+**Fastlane**
+
+[Fastlane](https://docs.fastlane.tools) is the easiest way to automate beta deployments and releases for your app. It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.
+
+
 ## How to setup
 
 1. Clone this repository:
@@ -67,6 +72,13 @@ git init
 git add .
 git commit -m 'Initial commit'
 git push
+```
+
+5. Install `Bundler` and all dependencies:
+
+```bash
+sudo gem install bundler
+bundle install
 ```
 
 5. Install pods:
@@ -110,6 +122,21 @@ For formating run the sctipt:
 ```bash
 sh ./Scripts/swiftformat.sh
 ```
+
+**Fastlane**
+
+To use **Fastlane** you need to run the script. It will create a `Fastfile` configuration file in which you will add a building options. Those options you can find at the [documentation](https://docs.fastlane.tools).
+
+```bash
+bundle exec fastlane init
+```
+
+To use a your configuration that you added in `Fastfile`, run the scrip:
+
+```bash
+bundle exec fastlane [lane]
+```
+
 
 ## Release instructions 
 
