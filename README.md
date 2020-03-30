@@ -84,7 +84,7 @@ bundle install
 5. Install pods:
 
 ```bash
-pod install
+bundle exec pod install
 ```
 
 ## How to use
@@ -125,18 +125,13 @@ sh ./Scripts/swiftformat.sh
 
 **Fastlane**
 
-To use **Fastlane** you need to run the script. It will create a `Fastfile` configuration file in which you will add a building options. Those options you can find at the [documentation](https://docs.fastlane.tools).
-
-```bash
-bundle exec fastlane init
-```
-
 To use a your configuration that you added in `Fastfile`, run the scrip:
 
 ```bash
 bundle exec fastlane [lane]
 ```
 
+For more information check out fastlane [README.md](fastlane/README.md).
 
 ## Release instructions 
 
