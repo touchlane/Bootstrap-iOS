@@ -10,7 +10,7 @@ import SnapKit
 import UIKit
 
 class EmptyViewController: UIViewController {
-    private var contentView: UIView = UIView()
+    private let contentView = UIView()
 
     private let logoImageView = UIImageView()
 
