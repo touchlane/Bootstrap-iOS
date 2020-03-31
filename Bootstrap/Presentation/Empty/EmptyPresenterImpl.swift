@@ -3,7 +3,7 @@
 //  Bootstrap
 //
 //  Created by Alex Yanski on 3/5/20.
-//  Copyright © 2020 Alex Yanski. All rights reserved.
+//  Copyright © 2020 Touchlane LLC. All rights reserved.
 //
 
 final class EmptyPresenterImpl: EmptyPresenter {
