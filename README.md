@@ -86,7 +86,7 @@ sudo gem install bundler
 bundle install
 ```
 
-5. Install pods:
+6. Install pods:
 
 ```bash
 bundle exec pod install
