@@ -36,6 +36,11 @@ Primarily it is designed to generate VIPER modules but it is quite easy to custo
 
 [Fastlane](https://docs.fastlane.tools) is the easiest way to automate beta deployments and releases for your app. It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.
 
+**Bundler**
+
+[Bundler](https://bundler.io) provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+
+Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production
 
 ## How to setup
 
