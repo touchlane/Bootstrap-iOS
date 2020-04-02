@@ -2,14 +2,11 @@
 <!--- Select option. ---> 
 ready | in development | hold
 
-## JIRA ticket
-<!--- Specify the ticket. ---> 
-
-## Todos
-<!--- Extend the options. --->
-- [ ] Implementation
-- [ ] Tests
-- [ ] Documentation
+## TODO
+<!--- Specify what is left to do if the status is not ready. --->
+<!--- - [ ] A  --->
+<!--- - [ ] B  --->
+<!--- - [ ] C  --->
 
 ## UI Changes 
 <!--- Add screenshots related to UI changes, also provide other screens resolutions \ types if needed. ---> 
