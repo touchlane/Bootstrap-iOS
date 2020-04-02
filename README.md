@@ -36,6 +36,11 @@ Primarily it is designed to generate VIPER modules but it is quite easy to custo
 
 [Fastlane](https://docs.fastlane.tools) is the easiest way to automate beta deployments and releases for your app. It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.
 
+**Bundler**
+
+[Bundler](https://bundler.io) provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+
+Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production
 
 ## How to setup
 
@@ -81,10 +86,10 @@ sudo gem install bundler
 bundle install
 ```
 
-5. Install pods:
+6. Install pods:
 
 ```bash
-pod install
+bundle exec pod install
 ```
 
 ## How to use
@@ -125,18 +130,13 @@ sh ./Scripts/swiftformat.sh
 
 **Fastlane**
 
-To use **Fastlane** you need to run the script. It will create a `Fastfile` configuration file in which you will add a building options. Those options you can find at the [documentation](https://docs.fastlane.tools).
-
-```bash
-bundle exec fastlane init
-```
-
 To use a your configuration that you added in `Fastfile`, run the scrip:
 
 ```bash
 bundle exec fastlane [lane]
 ```
 
+For more information check out fastlane [README.md](fastlane/README.md).
 
 ## Release instructions 
 
