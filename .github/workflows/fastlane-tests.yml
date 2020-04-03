@@ -11,11 +11,15 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix: 
-        destination: ['Phone SE', 'iPhone 11 Pro']
+        destination: ['iPhone 8']
         xcode: ['/Applications/Xcode.app/Contents/Developer']
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Bundle Install
+        run: bundle install
+      - name: Dependencies
+        run: bundle exec pod install
       - name: Test
         uses: maierj/fastlane-action@v1.4.0
         with:
