@@ -136,6 +136,8 @@ To use a your configuration that you added in `Fastfile`, run the scrip:
 bundle exec fastlane [lane]
 ```
 
+Note that you need to change the `Fastlane` configuration. Open `Fastfile` and replace `development_scheme` value with a new scheme name.
+
 For more information check out fastlane [README.md](fastlane/README.md).
 
 ## Release instructions 
