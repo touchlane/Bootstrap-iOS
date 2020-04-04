@@ -3,14 +3,14 @@
 //  Bootstrap
 //
 //  Created by Alex Yanski on 3/3/20.
-//  Copyright © 2020 Alex Yanski. All rights reserved.
+//  Copyright © 2020 Touchlane LLC. All rights reserved.
 //
 
 import SnapKit
 import UIKit
 
 class EmptyViewController: UIViewController {
-    private var contentView: UIView = UIView()
+    private let contentView = UIView()
 
     private let logoImageView = UIImageView()
 
@@ -19,7 +19,6 @@ class EmptyViewController: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = .white
-        navigationItem.title = L10n.NavigationBar.title
 
         view.addSubview(contentView)
         contentView.backgroundColor = .white
@@ -38,8 +37,6 @@ class EmptyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoImageView.image = Asset.mainLogo.image
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         presenter.viewDidLoad()
     }
 
@@ -49,4 +46,13 @@ class EmptyViewController: UIViewController {
     }
 }
 
-extension EmptyViewController: EmptyView {}
+extension EmptyViewController: EmptyView {
+    func display(headerTitle: String) {
+        navigationItem.title = headerTitle
+    }
+
+    func display(footerImage: UIImage) {
+        logoImageView.image = footerImage
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
+    }
+}

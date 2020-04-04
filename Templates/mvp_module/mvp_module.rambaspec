@@ -13,3 +13,4 @@ code_files:
 - {name: PresenterImpl.swift, path: Code/presenter.swift.liquid}
 - {name: ViewController.swift, path: Code/view.swift.liquid}
 - {name: BuilderImpl.swift, path: Code/builder.swift.liquid}
+- {name: .strings, path: Code/localization.strings.liquid}

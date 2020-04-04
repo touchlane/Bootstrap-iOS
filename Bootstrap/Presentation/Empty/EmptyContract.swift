@@ -3,7 +3,7 @@
 //  Bootstrap
 //
 //  Created by Alex Yanski on 3/4/20.
-//  Copyright © 2020 Alex Yanski. All rights reserved.
+//  Copyright © 2020 Touchlane LLC. All rights reserved.
 //
 
 import UIKit
@@ -22,7 +22,10 @@ protocol EmptyListener: AnyObject {
     func onEmptyBack()
 }
 
-protocol EmptyView: AnyObject {}
+protocol EmptyView: AnyObject {
+    func display(headerTitle: String)
+    func display(footerImage: UIImage)
+}
 
 protocol EmptyPresenter {
     func viewDidLoad()

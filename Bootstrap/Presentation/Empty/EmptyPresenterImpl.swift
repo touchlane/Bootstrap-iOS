@@ -3,7 +3,7 @@
 //  Bootstrap
 //
 //  Created by Alex Yanski on 3/5/20.
-//  Copyright © 2020 Alex Yanski. All rights reserved.
+//  Copyright © 2020 Touchlane LLC. All rights reserved.
 //
 
 final class EmptyPresenterImpl: EmptyPresenter {
@@ -21,7 +21,10 @@ final class EmptyPresenterImpl: EmptyPresenter {
         self.interactor = interactor
     }
 
-    func viewDidLoad() {}
+    func viewDidLoad() {
+        view?.display(headerTitle: L10n.NavigationBar.title)
+        view?.display(footerImage: Asset.mainLogo.image)
+    }
 
     func viewWillAppear() {}
 }

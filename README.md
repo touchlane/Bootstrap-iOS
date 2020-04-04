@@ -32,6 +32,16 @@ SwiftGen uses a configuration file to run various actions. You can configurate a
 
 Primarily it is designed to generate VIPER modules but it is quite easy to customize it for generation of any other classes. For our case we create a MVP template with Router, Interactor, Builder, Component and Contract.
 
+**Fastlane**
+
+[Fastlane](https://docs.fastlane.tools) is the easiest way to automate beta deployments and releases for your app. It handles all tedious tasks, like generating screenshots, dealing with code signing, and releasing your application.
+
+**Bundler**
+
+[Bundler](https://bundler.io) provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
+
+Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production
+
 ## How to setup
 
 1. Clone this repository:
@@ -69,12 +79,18 @@ git commit -m 'Initial commit'
 git push
 ```
 
-5. Install pods:
+5. Install `Bundler` and all dependencies:
 
 ```bash
-pod install
+sudo gem install bundler
+bundle install
 ```
 
+6. Install pods:
+
+```bash
+bundle exec pod install
+```
 
 ## How to use
 
@@ -111,3 +127,31 @@ For formating run the sctipt:
 ```bash
 sh ./Scripts/swiftformat.sh
 ```
+
+**Fastlane**
+
+To use a your configuration that you added in `Fastfile`, run the scrip:
+
+```bash
+bundle exec fastlane [lane]
+```
+
+Note that you need to change the `Fastlane` configuration. Open `Fastfile` and configure needed values.
+
+For more information check out fastlane [README.md](fastlane/README.md).
+
+## Release instructions 
+
+1. Create a pull request from `develop` to `master`.
+2. Wait till approved.
+3. Merge pull request.
+4. Tag the merge commit by release version and push it.
+
+```bash
+git tag [RELEASE_VERSION]
+git push --tags
+```
+
+5. Open `release` on [Bootstrap-iOS](https://github.com/touchlane/Bootstrap-iOS) page. 
+6. Copy and paste appropriate release notes from CANGELOG.md.
+7. Click `Publish release`.

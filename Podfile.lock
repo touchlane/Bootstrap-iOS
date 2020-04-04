@@ -13,7 +13,7 @@ DEPENDENCIES:
   - SwiftGen (~> 6.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
     - SnapKit
@@ -29,4 +29,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 978b9f9c14ced47ee404e4f4b5acb9161d45980e
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
