@@ -303,7 +303,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "Alex Yanski";
+				ORGANIZATIONNAME = "Touchlane LLC";
 				TargetAttributes = {
 					A3FBB6D4240E376000060802 = {
 						CreatedOnToolsVersion = 11.3.1;
