@@ -1,4 +1,4 @@
-# Changelog for TestProject-iOS 1.1.0
+# Changelog for TestProject-iOS 1.2.0
 ### Fixed
 * Organization name
 
