@@ -1,4 +1,8 @@
 # Changelog for TestProject-iOS 1.1.0
+### Fixed
+* Organization name
+
+# Changelog for TestProject-iOS 1.1.0
 ### Added
 * Tests using Quick and Nimble
 * Pull request template
