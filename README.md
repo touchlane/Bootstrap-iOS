@@ -114,10 +114,10 @@ To install Generamba it self run the command:
 gem install generamba
 ```
 
-For using our `mvp_module` template run:
+For using our `mvp_push` or `mvp_present` template run:
 
 ```bash
-generamba gen [MODULE_NAME] mvp_module
+generamba gen [MODULE_NAME] [TEMPLATE_NAME]
 ```
 
 **SwiftFormat**

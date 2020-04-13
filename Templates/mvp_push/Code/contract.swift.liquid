@@ -1,0 +1,34 @@
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+protocol {{ module_info.name }}Dependency {
+    var parent: UIViewController { get }
+}
+
+protocol {{ module_info.name }}Builder {
+    func build(listener: {{ module_info.name }}Listener) -> UIViewController
+}
+
+protocol {{ module_info.name }}Listener: AnyObject {
+    func on{{ module_info.name }}Finish()
+}
+
+protocol {{ module_info.name }}Router: AnyObject {
+    func back()
+}
+
+protocol {{ module_info.name }}Interactor: AnyObject {}
+
+protocol {{ module_info.name }}Presenter: AnyObject {
+    func viewDidLoad()
+    func viewWillAppear()
+    func handleBackButtonPressed()
+}
+
+protocol {{ module_info.name }}View: AnyObject {}

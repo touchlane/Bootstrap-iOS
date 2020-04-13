@@ -1,0 +1,32 @@
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}BuilderImpl: {{ module_info.name }}Builder {
+    private let dependency: {{ module_info.name }}Dependency
+
+    init(dependency: {{ module_info.name }}Dependency) {
+        self.dependency = dependency
+    }
+
+    func build(listener: {{ module_info.name }}Listener) -> UIViewController {
+        let view = {{ module_info.name }}ViewController()
+        let component = {{ module_info.name }}Component(dependency: dependency)
+
+        let presentationScene = PresentationScene(parent: view)
+        let router = {{ module_info.name }}RouterImpl(listener: listener, presentationScene: presentationScene)
+        let interactor = {{ module_info.name }}InteractorImpl()
+        let presenter = {{ module_info.name }}PresenterImpl(
+            view: view,
+            interactor: interactor,
+            router: router
+        )
+        view.presenter = presenter
+        return view
+    }
+}
