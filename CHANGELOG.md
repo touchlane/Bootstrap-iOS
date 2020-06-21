@@ -1,4 +1,6 @@
 # Changelog for TestProject-iOS 1.2.0
+### Added
+* Support presentation style in generamba template
 ### Fixed
 * Organization name
 

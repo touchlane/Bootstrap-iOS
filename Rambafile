@@ -20,4 +20,5 @@ podfile_path: Podfile
 
 ### Templates
 templates:
-- {name: mvp_module, local: 'Templates/mvp_module'}
+- {name: mvp_push, local: 'Templates/mvp_push'}
+- {name: mvp_present, local: 'Templates/mvp_present'}
